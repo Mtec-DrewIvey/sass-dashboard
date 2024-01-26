@@ -1,2 +1,37 @@
-@import 'base'
+@use 'base-var';
+@use 'base-mix';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+        "side head"
+        "side main";
+}
+
+header {
+    @include base-mix.aside;
+    border-bottom: 1px solid base-var.$border-gray;
+}
+
+.sidebar {
+    @include base-mix.aside(side);
+    border-right: 1px solid base-var.$border-gray;
+}
+
+.main {
+    background-color: base-var.$bg-main;
+    grid-area: main;
+
+    display: flex;
+    flex-flow: row wrap;
+}
 
