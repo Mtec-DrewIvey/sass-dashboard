@@ -1,4 +1,9 @@
-* {
+.timeframe {
+  font-size: 0.75rem;
+  color: #8c8a8d;
+}
+
+*, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -15,10 +20,39 @@ body {
 header {
   background-color: #feffff;
   grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid #e1dce4;
+}
+header .search {
+  padding: 1rem;
+}
+header .search input {
+  padding: 1rem;
+  min-width: 300px;
+  border-radius: 1rem;
+  border-style: none;
+}
+@media (max-width: 700px) {
+  header .search input {
+    min-width: 50px;
+  }
+}
+header .user-options {
+  padding: 1rem;
+}
+header .user-options button {
+  padding: 0.5rem;
+  border-radius: 50%;
+  border-style: none;
+  background-color: #66189c;
+  color: #feffff;
 }
 
 .sidebar {
+  position: sticky;
+  top: 0;
   background-color: #feffff;
   grid-area: side;
   border-right: 1px solid #e1dce4;
@@ -26,7 +60,114 @@ header {
 
 .main {
   background-color: #f9f8fa;
+  height: 100%;
+  padding: 4rem;
+}
+
+.flex-wrapper {
   grid-area: main;
   display: flex;
   flex-flow: row wrap;
+  align-content: flex-start;
+  gap: 2.5rem;
+  padding-top: 2.5rem;
+}
+.flex-wrapper > * {
+  flex: 1 0 auto;
+}
+
+.greeting h1 {
+  font-size: 1.75rem;
+  color: #1e1d25;
+  margin-bottom: 0.5rem;
+}
+.greeting p {
+  font-size: 1rem;
+  color: #8c8a8d;
+}
+
+.summary-cards {
+  display: flex;
+  flex-flow: wrap;
+  border: 1px solid #e1dce4;
+  border-radius: 0.5rem;
+  gap: 0;
+}
+.summary-cards .summary-card {
+  flex: 1;
+  padding: 1rem;
+}
+.summary-cards .summary-card .card-header, .summary-cards .summary-card .overview-num {
+  padding-bottom: 1rem;
+}
+.summary-cards .summary-card .card-header h3 {
+  font-size: 0.85rem;
+}
+.summary-cards .summary-card .overview-num {
+  display: inline-flex;
+  align-items: center;
+}
+.summary-cards .summary-card .overview-num .increase {
+  background-color: #d6f4cd;
+  color: #2d890c;
+  font-size: 0.75rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}
+.summary-cards .summary-card .overview-num .decrease {
+  background-color: #f8c6bb;
+  color: #db4e5e;
+  font-size: 0.75rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}
+.summary-cards .summary-card:not(:last-child) {
+  border-right: 1px solid #e1dce4;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.header-box .header-info h2 {
+  font-size: 1.25rem;
+}
+.header-box .more-link a {
+  color: #66189c;
+  text-decoration: none;
+}
+
+.project-cards-container {
+  display: flex;
+  flex-flow: wrap;
+  border: none;
+  border-radius: 0.5rem;
+  gap: 1rem;
+}
+.project-cards-container .project-card {
+  flex: 1;
+  border: 1px solid #e1dce4;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.project-cards-container .project-card > * {
+  padding: 0.5rem;
+}
+.project-cards-container .project-card .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-container {
+  width: 90%;
+}
+.content-container h4 {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+.content-container h3 {
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

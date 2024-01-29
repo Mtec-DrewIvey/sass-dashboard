@@ -1,0 +1,22 @@
+@use 'variables';
+
+@mixin aside($grid: head) {
+    background-color: variables.$bg-side;
+    grid-area: $grid;
+}
+
+@mixin percent_bubble($bg-color: variables.$bg-increase, $text-color: variables.$fc-increase){
+    background-color: $bg-color;
+    color: $text-color;
+    font-size: variables.$fs-extra-small;
+    padding: .125rem .25rem;
+    border-radius: .25rem;
+}
+
+@mixin card($gap: 0, $border: 1px solid variables.$border-gray) {
+    display: flex;
+    flex-flow: wrap;
+    border: $border;
+    border-radius: .5rem;
+    gap: $gap;
+}

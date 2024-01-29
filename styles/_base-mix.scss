@@ -1,6 +1,0 @@
-@use 'base-var';
-
-@mixin aside($grid: head) {
-    background-color: base-var.$bg-side;
-    grid-area: $grid;
-}

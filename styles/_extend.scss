@@ -1,0 +1,6 @@
+@use 'variables';
+
+%card-sub-text {
+    font-size: variables.$fs-extra-small;
+    color: variables.$fc-gray;
+}
