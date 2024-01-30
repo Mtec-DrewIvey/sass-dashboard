@@ -2,21 +2,19 @@
 @use 'mixins';
 @use 'extend';
 
+// Trying new reset for padding, margin and box-sizing
 *, *::before, *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-}
-
 body {
     min-height: 100svh;
 
+    // using grid to set up general layout of dashboard
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 60px 1fr;
     grid-template-areas: 
         "side head"
@@ -24,23 +22,15 @@ body {
 }
 
 header {
+    @include mixins.aside;
+    @extend %flex-align;
+    justify-content: space-between;
     position: sticky;
     top: 0;
-    @include mixins.aside;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     border-bottom: 1px solid variables.$border-gray;
 
     .search {
-        padding: 1rem;
-
-        input{
-            padding: 1rem;
-            min-width: 300px;
-            border-radius: 1rem;
-            border-style: none;
-        }
+        @include mixins.search-input;
 
         @media (max-width: 700px) {
             input {
@@ -50,10 +40,9 @@ header {
     }
 
     .user-options {
-        padding: 1rem;
-        display: inline-flex;
-        align-items: center;
+        @extend %flex-align;
         gap: 1rem;
+        padding: 1rem;
 
         button {
             padding: .5rem;
@@ -71,13 +60,9 @@ header {
     border-right: 1px solid variables.$border-gray;
 
     .company-logo {
-        display: flex;
+        @extend %flex-align;
         justify-content: center;
-        align-items: center;
-
-        i {
-            border-radius: 50%;
-        }
+        padding-top: .5rem;
     }
 
     .main-nav, .resource-nav {
@@ -87,12 +72,13 @@ header {
         margin: 2rem 0;
         // padding-left: 1rem;
 
-        h4 {
+        h6 {
+            font-size: variables.$fs-small;
             padding-left: 1rem;
         }
 
         .nav-item {
-            display: inline-flex;
+            display: flex;
 
             a {
                 text-decoration: none;
@@ -134,6 +120,8 @@ header {
     }
 }
 
+// Each section is in a .content-container div 
+// Applies like-styling to all of them.
 .content-container {
     width: 90%;
 
@@ -146,6 +134,7 @@ header {
         font-size: variables.$fs-medium;
     }
 }
+
 .greeting {
     h1 {
         font-size: variables.$fs-extra-large;
@@ -159,6 +148,7 @@ header {
     }
 }
 
+// Overview Cards - Recap
 .summary-cards {
     @include mixins.card();
 
@@ -175,8 +165,7 @@ header {
         }
 
         .overview-num {
-            display: inline-flex;
-            align-items: center;
+            @extend %flex-align;
 
             .increase{
                 @include mixins.percent_bubble;
@@ -193,9 +182,9 @@ header {
     }
 }
 
+// Header box - Header describing following 'widget'
 .header-box {
-    display: flex;
-    align-items: center;
+    @extend %flex-align;
     justify-content: space-between;
     margin-bottom: 1rem;
 
@@ -209,6 +198,7 @@ header {
     }
 }
 
+//  Project Cards - 
 .project-cards-container {
     @include mixins.card(1rem, none);
 
@@ -217,18 +207,18 @@ header {
         border: 1px solid variables.$border-gray;
         border-radius: .5rem;
         padding: 1rem;
-
+        // Equal padding for all elements in card
         > * {
             padding: .5rem;
         }
         .card-footer {
-            display: flex;
+            @extend %flex-align;
             justify-content: space-between;
-            align-items: center;
         }
     }
 }
 
+// Conversations Table 
 .message-table table {
     @extend %full-border;
     border-collapse: collapse;
@@ -242,13 +232,13 @@ header {
     }
 
     .user-info {
-        display: flex;
-        align-items: center;
+        @extend %flex-align;
         gap: 2rem;
     }
 
 }
 
+// Timeframe subtext in cards
 .timeframe {
     @extend %card-sub-text;
 }

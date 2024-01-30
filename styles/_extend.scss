@@ -8,3 +8,8 @@
 %full-border {
     border: 1px solid variables.$border-gray;
 }
+
+%flex-align {
+    display: flex;
+    align-items: center;
+}

@@ -7,32 +7,31 @@
   border: 1px solid #e1dce4;
 }
 
+header, header .user-options, .sidebar .company-logo, .summary-cards .summary-card .overview-num, .header-box, .project-cards-container .project-card .card-footer, .message-table table .user-info {
+  display: flex;
+  align-items: center;
+}
+
 *, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-}
-
 body {
   min-height: 100svh;
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 200px 1fr;
   grid-template-rows: 60px 1fr;
   grid-template-areas: "side head" "side main";
 }
 
 header {
-  position: sticky;
-  top: 0;
   background-color: #feffff;
   grid-area: head;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
   border-bottom: 1px solid #e1dce4;
 }
 header .search {
@@ -50,10 +49,8 @@ header .search input {
   }
 }
 header .user-options {
-  padding: 1rem;
-  display: inline-flex;
-  align-items: center;
   gap: 1rem;
+  padding: 1rem;
 }
 header .user-options button {
   padding: 0.5rem;
@@ -69,12 +66,8 @@ header .user-options button {
   border-right: 1px solid #e1dce4;
 }
 .sidebar .company-logo {
-  display: flex;
   justify-content: center;
-  align-items: center;
-}
-.sidebar .company-logo i {
-  border-radius: 50%;
+  padding-top: 0.5rem;
 }
 .sidebar .main-nav, .sidebar .resource-nav {
   display: flex;
@@ -82,11 +75,12 @@ header .user-options button {
   gap: 1.25rem;
   margin: 2rem 0;
 }
-.sidebar .main-nav h4, .sidebar .resource-nav h4 {
+.sidebar .main-nav h6, .sidebar .resource-nav h6 {
+  font-size: 0.85rem;
   padding-left: 1rem;
 }
 .sidebar .main-nav .nav-item, .sidebar .resource-nav .nav-item {
-  display: inline-flex;
+  display: flex;
 }
 .sidebar .main-nav .nav-item a, .sidebar .resource-nav .nav-item a {
   text-decoration: none;
@@ -158,10 +152,6 @@ header .user-options button {
 .summary-cards .summary-card .card-header h3 {
   font-size: 0.85rem;
 }
-.summary-cards .summary-card .overview-num {
-  display: inline-flex;
-  align-items: center;
-}
 .summary-cards .summary-card .overview-num .increase {
   background-color: #d6f4cd;
   color: #2d890c;
@@ -181,8 +171,6 @@ header .user-options button {
 }
 
 .header-box {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
@@ -211,9 +199,7 @@ header .user-options button {
   padding: 0.5rem;
 }
 .project-cards-container .project-card .card-footer {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .message-table table {
@@ -227,7 +213,5 @@ header .user-options button {
   text-align: left;
 }
 .message-table table .user-info {
-  display: flex;
-  align-items: center;
   gap: 2rem;
 }/*# sourceMappingURL=style.css.map */

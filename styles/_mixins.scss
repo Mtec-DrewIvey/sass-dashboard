@@ -5,6 +5,17 @@
     grid-area: $grid;
 }
 
+@mixin search-input {
+        padding: 1rem;
+
+        input{
+            padding: 1rem;
+            min-width: 300px;
+            border-radius: 1rem;
+            border-style: none;
+        }
+}
+
 @mixin percent_bubble($bg-color: variables.$bg-increase, $text-color: variables.$fc-increase){
     background-color: $bg-color;
     color: $text-color;
