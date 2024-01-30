@@ -4,3 +4,7 @@
     font-size: variables.$fs-extra-small;
     color: variables.$fc-gray;
 }
+
+%full-border {
+    border: 1px solid variables.$border-gray;
+}

@@ -21,40 +21,40 @@
     <!-- Sidebar Nav -->
     <div class="sidebar">
         <div class="company-logo">
-            <h1>useful</h1>
+            <img src="images/useful-logo.png" alt="Custom Useful logo">
         </div>
         <nav>
             <div class="main-nav">
-                <div class="nav-item">
-                    <i class="fa-solid fa-sitemap"></i>
-                    Dashboard
+                <div class="nav-item active">
+                    <a href="#" class="active"><i class="fa-solid fa-sitemap active" ></i>
+                        <span class="active">Dashboard</span></a>
                 </div>
                 <div class="nav-item">
-                    <i class="fa-regular fa-folder"></i>
-                    Projects
+                    <a href="#"><i class="fa-regular fa-folder"></i>
+                    Projects</a>
                 </div>
                 <div class="nav-item">
-                    <i class="fa-regular fa-id-card"></i>
-                    People
+                    <a href="#"><i class="fa-regular fa-id-card"></i>
+                    People</a>
                 </div>
                 <div class="nav-item">
-                    <i class="fa-regular fa-comment"></i>
-                    Conversations
+                    <a href="#"><i class="fa-regular fa-comment"></i>
+                    Conversations</a>
                 </div>
                 <div class="nav-item">
-                    <i class="fa-solid fa-gears"></i>
-                    Settings
+                    <a href="#"><i class="fa-solid fa-gears"></i>
+                    Settings</a>
                 </div>
             </div>
             <div class="resource-nav">
                 <h4>RESOURCES</h4>
                 <div class="nav-item">
-                    <i class="fa-regular fa-newspaper"></i>
-                    Templates
+                    <a href="#"><i class="fa-regular fa-newspaper"></i>
+                    Templates</a>
                 </div>
                 <div class="nav-item">
-                    <i class="fa-regular fa-circle-question"></i>
-                    Help center
+                    <a href="#"><i class="fa-regular fa-circle-question"></i>
+                    Help center</a>
                 </div>
             </div>
         </nav>
@@ -197,85 +197,93 @@
                     </div>
                 </div>
             </div>
-        </div>
-
             
-        <div class="grid-container">
             <!-- Conversation Table -->
-            <div class="header-box">
-                <div class="header-info">
-                    <h2>Projects you're working on</h2>
+            <div class="content-container">
+                <div class="header-box">
+                    <div class="header-info">
+                        <h2>Recent conversations</h2>
+                    </div>
+                    <div class="more-link">
+                        <p><a href="#">See all</a></p>
+                    </div>
                 </div>
-                <div class="more-link">
-                    <p><a href="#">See all</a></p>
-                </div>
-            </div>
-            <div class="messaging-box">
-                <table>
-                    <thead>
+                <div class="message-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Interview date</th>
+                                <th></th>
+                            </tr>
+                        </thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Role</th>
-                            <th>Interview date</th>
+                            <td>
+                                <div class="user-info">
+                                    <i class="fa-regular fa-user"></i><p>Esther Howard</p>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Product Manager</p>
+                            </td>
+                            <td>
+                                <p>Feb 19, 2022</p>
+                            </td>
+                            <td>
+                                <p>...</p>
+                            </td>
                         </tr>
-                    </thead>
-                    <tr>
-                        <td>
-                            <i class="fa-regular fa-user"></i><p>Esther Howard</p>
-                        </td>
-                        <td>
-                            <p>Product Manager</p>
-                        </td>
-                        <td>
-                            <p>Feb 19, 2022</p>
-                        </td>
-                        <td>
-                            <p>...</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="fa-regular fa-user"></i><p>Esther Howard</p>
-                        </td>
-                        <td>
-                            <p>Product Manager</p>
-                        </td>
-                        <td>
-                            <p>Feb 19, 2022</p>
-                        </td>
-                        <td>
-                            <p>...</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="fa-regular fa-user"></i><p>Esther Howard</p>
-                        </td>
-                        <td>
-                            <p>Product Manager</p>
-                        </td>
-                        <td>
-                            <p>Feb 19, 2022</p>
-                        </td>
-                        <td>
-                            <p>...</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="fa-regular fa-user"></i><p>Esther Howard</p>
-                        </td>
-                        <td>
-                            <p>Product Manager</p>
-                        </td>
-                        <td>
-                            <p>Feb 19, 2022</p>
-                        </td>
-                        <td>
-                            <p>...</p>
-                        </td>
-                    </tr>
-                </table>
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <i class="fa-regular fa-user"></i><p>Dianne Russel</p>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Researcher</p>
+                            </td>
+                            <td>
+                                <p>Feb 18, 2022</p>
+                            </td>
+                            <td>
+                                <p>...</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <i class="fa-regular fa-user"></i><p>Ralph Edwards</p>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Product Manager</p>
+                            </td>
+                            <td>
+                                <p>Feb 18, 2022</p>
+                            </td>
+                            <td>
+                                <p>...</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <i class="fa-regular fa-user"></i><p>Kathryn Murphy</p>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Product Manager</p>
+                            </td>
+                            <td>
+                                <p>Feb 17, 2022</p>
+                            </td>
+                            <td>
+                                <p>...</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
             <!-- Meetings Cards -->

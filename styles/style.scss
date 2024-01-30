@@ -7,8 +7,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+img {
+    max-width: 100%;
+}
+
 body {
-    min-height: 100vh;
+    min-height: 100svh;
 
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -19,6 +24,8 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
     @include mixins.aside;
     display: flex;
     align-items: center;
@@ -44,6 +51,9 @@ header {
 
     .user-options {
         padding: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
 
         button {
             padding: .5rem;
@@ -57,31 +67,83 @@ header {
 }
 
 .sidebar {
-    position: sticky;
-    top: 0;
     @include mixins.aside(side);
     border-right: 1px solid variables.$border-gray;
+
+    .company-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            border-radius: 50%;
+        }
+    }
+
+    .main-nav, .resource-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin: 2rem 0;
+        // padding-left: 1rem;
+
+        h4 {
+            padding-left: 1rem;
+        }
+
+        .nav-item {
+            display: inline-flex;
+
+            a {
+                text-decoration: none;
+                color: variables.$fc-gray;
+                padding: 0 0 .5rem 1rem;
+            }
+
+            a.active {
+                border-left: 3px solid variables.$active-link;
+            }
+
+            .active {
+                
+                color: variables.$fc-active;
+            }
+
+            i {
+                padding-right: .5rem;
+            }
+        }
+    }
 }
 
 .main {
     background-color: variables.$bg-main;
-    height: 100%;
+    min-height: 100%;
     padding: 4rem;
 }
 
 .flex-wrapper {
     grid-area: main;
-    // height: 100%;
-
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
     gap: 2.5rem;
 
-    padding-top: 2.5rem;
-
     > * {
         flex: 1 0 auto;
+    }
+}
+
+.content-container {
+    width: 90%;
+
+    h4 {
+        font-size: variables.$fs-large;
+        margin-right: .5rem;
+    }
+
+    h3 {
+        font-size: variables.$fs-medium;
     }
 }
 .greeting {
@@ -167,19 +229,24 @@ header {
     }
 }
 
+.message-table table {
+    @extend %full-border;
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
 
-
-.content-container {
-    width: 90%;
-
-    h4 {
-        font-size: variables.$fs-large;
-        margin-right: .5rem;
+    th, td {
+        border-bottom: 1px solid lightgray;
+        padding: 1rem;
+        text-align: left;
     }
 
-    h3 {
-        font-size: variables.$fs-medium;
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
     }
+
 }
 
 .timeframe {

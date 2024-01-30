@@ -3,14 +3,22 @@
   color: #8c8a8d;
 }
 
+.message-table table {
+  border: 1px solid #e1dce4;
+}
+
 *, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
-  min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   grid-template-columns: 250px 1fr;
   grid-template-rows: 60px 1fr;
@@ -18,6 +26,8 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
   background-color: #feffff;
   grid-area: head;
   display: flex;
@@ -41,6 +51,9 @@ header .search input {
 }
 header .user-options {
   padding: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
 }
 header .user-options button {
   padding: 0.5rem;
@@ -51,16 +64,48 @@ header .user-options button {
 }
 
 .sidebar {
-  position: sticky;
-  top: 0;
   background-color: #feffff;
   grid-area: side;
   border-right: 1px solid #e1dce4;
 }
+.sidebar .company-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .company-logo i {
+  border-radius: 50%;
+}
+.sidebar .main-nav, .sidebar .resource-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.sidebar .main-nav h4, .sidebar .resource-nav h4 {
+  padding-left: 1rem;
+}
+.sidebar .main-nav .nav-item, .sidebar .resource-nav .nav-item {
+  display: inline-flex;
+}
+.sidebar .main-nav .nav-item a, .sidebar .resource-nav .nav-item a {
+  text-decoration: none;
+  color: #8c8a8d;
+  padding: 0 0 0.5rem 1rem;
+}
+.sidebar .main-nav .nav-item a.active, .sidebar .resource-nav .nav-item a.active {
+  border-left: 3px solid #66189c;
+}
+.sidebar .main-nav .nav-item .active, .sidebar .resource-nav .nav-item .active {
+  color: #392b51;
+}
+.sidebar .main-nav .nav-item i, .sidebar .resource-nav .nav-item i {
+  padding-right: 0.5rem;
+}
 
 .main {
   background-color: #f9f8fa;
-  height: 100%;
+  min-height: 100%;
   padding: 4rem;
 }
 
@@ -70,10 +115,20 @@ header .user-options button {
   flex-flow: row wrap;
   align-content: flex-start;
   gap: 2.5rem;
-  padding-top: 2.5rem;
 }
 .flex-wrapper > * {
   flex: 1 0 auto;
+}
+
+.content-container {
+  width: 90%;
+}
+.content-container h4 {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+.content-container h3 {
+  font-size: 1rem;
 }
 
 .greeting h1 {
@@ -161,13 +216,18 @@ header .user-options button {
   align-items: center;
 }
 
-.content-container {
-  width: 90%;
+.message-table table {
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0;
 }
-.content-container h4 {
-  font-size: 1.25rem;
-  margin-right: 0.5rem;
+.message-table table th, .message-table table td {
+  border-bottom: 1px solid lightgray;
+  padding: 1rem;
+  text-align: left;
 }
-.content-container h3 {
-  font-size: 1rem;
+.message-table table .user-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }/*# sourceMappingURL=style.css.map */
