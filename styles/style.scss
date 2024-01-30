@@ -28,29 +28,25 @@ header {
     position: sticky;
     top: 0;
     border-bottom: 1px solid variables.$border-gray;
-
+    
     .search {
         @include mixins.search-input;
-
-        @media (max-width: 700px) {
-            input {
-                min-width: 50px;
-            }
-        }
     }
 
     .user-options {
         @extend %flex-align;
         gap: 1rem;
-        padding: 1rem;
+        padding-right: 2rem;
 
         button {
+            cursor: pointer;
             padding: .5rem;
             border-radius: 50%;
             border-style: none;
             background-color: variables.$active-link;
             color: variables.$bg-side;
         }
+
     }
 
 }
@@ -231,14 +227,43 @@ header {
         text-align: left;
     }
 
+    td p {
+        cursor: pointer;
+    }
+
     .user-info {
         @extend %flex-align;
         gap: 2rem;
     }
-
 }
 
 // Timeframe subtext in cards
 .timeframe {
     @extend %card-sub-text;
+}
+
+// Media Query 
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 50px 1fr;
+    }
+    input {
+        display: none;
+    }
+    header {
+        justify-content: flex-start;
+    }
+
+    nav{ 
+        margin-top: 6rem;
+    } 
+    
+    span, h6{
+        display: none;
+    }    
+
+    .company-logo  {
+        position: absolute;
+        left: -500px;
+    }
 }

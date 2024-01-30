@@ -43,16 +43,12 @@ header .search input {
   border-radius: 1rem;
   border-style: none;
 }
-@media (max-width: 700px) {
-  header .search input {
-    min-width: 50px;
-  }
-}
 header .user-options {
   gap: 1rem;
-  padding: 1rem;
+  padding-right: 2rem;
 }
 header .user-options button {
+  cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
   border-style: none;
@@ -212,6 +208,31 @@ header .user-options button {
   padding: 1rem;
   text-align: left;
 }
+.message-table table td p {
+  cursor: pointer;
+}
 .message-table table .user-info {
   gap: 2rem;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 50px 1fr;
+  }
+  input {
+    display: none;
+  }
+  header {
+    justify-content: flex-start;
+  }
+  nav {
+    margin-top: 6rem;
+  }
+  span, h6 {
+    display: none;
+  }
+  .company-logo {
+    position: absolute;
+    left: -500px;
+  }
 }/*# sourceMappingURL=style.css.map */
