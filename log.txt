@@ -1,0 +1,47 @@
+commit ec9ade10fbaa6c0555357f916c7cc1462c5e2cd3
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Tue Jan 30 09:20:29 2024 -0700
+
+    Added media query to collapse sidebar and remove searchbar that took up a lot of space. Main content already responsive thanks to flexbox. Tue Jan 30 09:20:29 MST 2024
+
+commit d68383d1d02fa5c35ec4c733c67ae72450ce23d7
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Tue Jan 30 07:18:34 2024 -0700
+
+    finishing touches. creating additional mixins/extensions and using those in place of redundant styling in scss file. Tue Jan 30 07:18:34 MST 2024
+
+commit 178927cc3b4df7f6972063e258c3cf113c20ace6
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Mon Jan 29 18:14:09 2024 -0700
+
+    adding gitignore to remove DS_Store
+
+commit b3d191c99a49b291e3b6e3bf080d92a19d8df235
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Mon Jan 29 18:13:32 2024 -0700
+
+    Cleaning up sidebar and adding logo Mon Jan 29 18:13:32 MST 2024
+
+commit e870e5e271e372c272d0ae6622bdbb5a0e220f28
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Sun Jan 28 20:23:54 2024 -0700
+
+    Added content to nav, header and main. basic styles added to format
+
+commit 9dae935f7683a4fda8dbc18b3ec62064eb507d96
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Thu Jan 25 21:35:24 2024 -0700
+
+    Created mixin file and finished general skeleton of dashboard
+
+commit 1d79ff00f691e97a88516fc25358e24fec74c0c7
+Author: Drew Ivey <drew.ivey4543@stu.mtec.edu>
+Date:   Thu Jan 25 18:13:13 2024 -0700
+
+    Initial commit. Setting up initial html/scss files and folders Thu Jan 25 18:13:13 MST 2024
+
+commit 7b0ddbb1cfb39ec6e7c25d90e09a35eaf5b87ba0
+Author: Drew Ivey <155995115+Mtec-DrewIvey@users.noreply.github.com>
+Date:   Thu Jan 25 17:05:30 2024 -0700
+
+    Initial commit
